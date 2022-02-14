@@ -22,7 +22,14 @@ class Menu extends React.Component {
       <>
         <Navbar bg="light" expand={false}>
           <Container fluid>
-            <Navbar.Brand href="#">Examen</Navbar.Brand>
+            <Navbar.Brand href="#">Examen
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"
+              width="40"
+              height="40"
+              alt="logo"
+            />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"

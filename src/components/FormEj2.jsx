@@ -10,22 +10,16 @@ class FormEj2 extends React.Component {
     this.state = {
       listaComponentes: elementos,
     };
-    this.Imagen = React.createRef();
-    this.Marca = React.createRef();
-    this.vSistemaOperativo = React.createRef();
+    this.imagen = React.createRef();
+    this.MarcaT = React.createRef();
+    this.SistemaOperativo = React.createRef();
     this.Dimension = React.createRef();
-    this.Almacenamiento = React.createRef();
+    this.AlmacenamientoT = React.createRef();
   }
 
   onClickAñadir() {
     const newLista = this.state.listaComponentes.concat(
-      <Libro
-        titulo={this.Imagen.current.value}
-        autor={this.Marca.current.value}
-        fecha={this.SistemaOperativo.current.value}
-        paginas={this.Dimension.current.value}
-        urlimagen={this.Almacenamiento.current.value}
-      />
+      
     );
     this.setState({ listaComponentes: newLista });
   }
@@ -37,13 +31,13 @@ class FormEj2 extends React.Component {
           <h1>Título</h1>
           {this.state.listaComponentes}
           <input
-            ref={this.Imagen}
+            ref={this.imagen}
             type="text"
             placeholder="Foto:"
           />
           <br />
           <input
-            ref={this.Marca}
+            ref={this.MarcaT}
             type="text"
             placeholder="Marca:"
           />
@@ -57,7 +51,7 @@ class FormEj2 extends React.Component {
           />
           <br />
           <input
-            ref={this.Almacenamiento}
+            ref={this.AlmacenamientoT}
             type="number"
             placeholder="Almacenamiento:"
           />
