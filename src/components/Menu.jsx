@@ -1,41 +1,55 @@
 import React from 'react';
-import uuid from 'react-uuid';
-import {PaginasApp}from '../data/PaginasApp';
+import {
+  Navbar, Container, Offcanvas, Nav, NavDropdown, Form, FormControl, Button,
+} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Navbar, Container, Nav,Offcanvas } from 'react-bootstrap';
-class Menu extends React.Component {
+
+class Navegacion extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <Navbar bg="light" expand={false}>
-      <Container fluid>
-        <Navbar.Brand href="#">Examen react</Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">Ejercicios</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-            {PaginasApp.map((item) => {
-                return (
-                  <Nav.Link key={uuid()} as={Link}  to={item.path}>
-                    {item.title}
-                  </Nav.Link>
-                );
-              })}
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
-    </Navbar>
+      <>
+        <Navbar bg="light" expand={false}>
+          <Container fluid>
+            <Navbar.Brand href="#">Examen React</Navbar.Brand>
+            <Navbar.Toggle aria-controls="offcanvasNavbar" />
+            <Navbar.Offcanvas
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id="offcanvasNavbarLabel">
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  {PaginasApp.map((item) => {
+                    return (
+                      <Nav.Link as={Link} to={item.path}>
+                        {item.title}
+                      </Nav.Link>
+                    );
+                  })}
+                </Nav>
+                <Form className="d-flex">
+                  <FormControl
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      </>
     );
   }
 }
