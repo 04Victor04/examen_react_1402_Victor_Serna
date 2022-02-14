@@ -1,14 +1,14 @@
-import Titulo from '../components/Titulo';
+import TituloMenu from '../components/TituloMenu';
 import Ejercicio1 from '../components/Ejercicio1';
 import Ejercicio2 from '../components/Ejercicio2';
 import Ejercicio3 from '../components/Ejercicio3';
 
-export const Ejercicios = [
+export const MenuItems = [
   {
     id: 1,
     path: '/',
-    title: 'Título Examen',
-    component: TituloEx,
+    title: 'TítuloMenu',
+    component: TituloMenu,
   },
   {
     id: 2,

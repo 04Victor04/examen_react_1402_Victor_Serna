@@ -1,10 +1,18 @@
 import React from 'react';
 import {
-  Navbar, Container, Offcanvas, Nav, NavDropdown, Form, FormControl, Button,
+  Navbar,
+  Container,
+  Offcanvas,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { PaginasApp } from '../data/PaginasApp';
 
-class Navegacion extends React.Component {
+class Menu extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,7 +22,7 @@ class Navegacion extends React.Component {
       <>
         <Navbar bg="light" expand={false}>
           <Container fluid>
-            <Navbar.Brand href="#">Examen React</Navbar.Brand>
+            <Navbar.Brand href="#">Repaso examen</Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"
@@ -36,15 +44,6 @@ class Navegacion extends React.Component {
                     );
                   })}
                 </Nav>
-                <Form className="d-flex">
-                  <FormControl
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
