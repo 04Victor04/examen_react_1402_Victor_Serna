@@ -22,7 +22,7 @@ class Menu extends React.Component {
       <>
         <Navbar bg="light" expand={false}>
           <Container fluid>
-            <Navbar.Brand href="#">Repaso examen</Navbar.Brand>
+            <Navbar.Brand href="#">Examen</Navbar.Brand>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Offcanvas
               id="offcanvasNavbar"
@@ -30,9 +30,7 @@ class Menu extends React.Component {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel">
-                  Offcanvas
-                </Offcanvas.Title>
+                
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">

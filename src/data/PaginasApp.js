@@ -2,8 +2,9 @@ import TituloMenu from '../components/TituloMenu';
 import Ejercicio1 from '../components/Ejercicio1';
 import Ejercicio2 from '../components/Ejercicio2';
 import Ejercicio3 from '../components/Ejercicio3';
+import FormEj2 from '../components/FormEj2';
 
-export const MenuItems = [
+export const PaginasApp = [
   {
     id: 1,
     path: '/',
@@ -27,5 +28,11 @@ export const MenuItems = [
     path: '/ejercicio3',
     title: 'Ejercicio 3',
     component: Ejercicio3,
+  },
+  {
+    id: 5,
+    path: '/formej2',
+    title: 'Fromulario',
+    component: FormEj2,
   },
 ];
